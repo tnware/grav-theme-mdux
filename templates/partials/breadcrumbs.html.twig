@@ -1,9 +1,17 @@
 {% set crumbs = breadcrumbs.get() %}
 
-{% if crumbs|length > 1 or config.plugins.breadcrumbs.show_all %}
-	<div class="breadcrumbs">
-	{% for crumb in crumbs %}
-		<a href="{{ crumb.url }}"> {{ crumb.menu }} </a><i class="mdi mdi-chevron-right"></i>
-	{% endfor %}
+	{% if crumbs|length > 1 or config.plugins.breadcrumbs.show_all %}
+<div class="row">
+	<div class="col s12">
+		<nav>
+			<div class="nav-wrapper blue">
+				<div class="col s12">
+				{% for crumb in crumbs %}
+					<a href="{{ crumb.url }}"> {{ crumb.menu }} </a><i class="mdi mdi-chevron-right"></i>
+				{% endfor %}
+				</div>
+			</div>
+		</nav>
 	</div>
-{% endif %}
+</div>
+		{% endif %}
