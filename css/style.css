@@ -22,7 +22,7 @@
   width: 100%;
   height: 250px;
   background-color: #1976d2;
-  position: fixed;
+  position: relative;
   z-index: -2;
   top: 0;
   }
