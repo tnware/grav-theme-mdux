@@ -53,11 +53,11 @@
              </p>
            {% endif %}
 					 <div class="row">"
-					 <div class="col s3 left-align">
+					 <div class="col s6 left-align">
           <a href="{{ page.url }}">Continue Reading...</a>
 				</div>
              {% if page.taxonomy.tag %}
-						 <div class="col s3 right-align">
+						 <div class="col s6 right-align">
                <span class="header-tags chip">
                  {% for tag in page.taxonomy.tag %}
                  <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag|upper }}</a>
