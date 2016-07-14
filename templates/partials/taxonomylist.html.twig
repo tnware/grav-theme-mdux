@@ -1,9 +1,9 @@
 {% set taxlist = taxonomylist.get() %}
 
 {% if taxlist %}
-	<span class="tags">
+	<span class="tags left-align chip">
 		{% for tax, value in taxlist[taxonomy] %}
-			<a href="{{ base_url }}/tag:{{ tax }}"><span class="new badge">{{ tax|upper }}</span></a>
+			<a href="{{ base_url }}/tag:{{ tax }}">{{ tax|upper }}<i class="material-icons">close</i></a>
 		{% endfor %}
 	</span>
 {% endif %}
