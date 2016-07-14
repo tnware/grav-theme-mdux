@@ -37,5 +37,6 @@
   width: auto;
   z-index: 3;
   box-shadow: 1px 1px 1px 1px #ccc;
+  position: absolute;
   margin-top: 80px;
   }
