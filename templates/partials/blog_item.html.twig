@@ -52,11 +52,11 @@
                {% endif %}
              </p>
            {% endif %}
-					 <div class="col left-align">
+					 <div class="section left-align">
           <a href="{{ page.url }}">Continue Reading...</a>
 				</div>
              {% if page.taxonomy.tag %}
-						 <div class="col right-align">
+						 <div class="section right-align">
                <span class="header-tags chip">
                  {% for tag in page.taxonomy.tag %}
                  <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag|upper }}</a>
