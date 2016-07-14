@@ -14,11 +14,10 @@
 	{% block content %}
 				<div class="col s12 m9 l9 blog-main grey lighten-2">
 					{% for child in collection %}
-					<div class="row">
 						{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
-					</div>
 					{% endfor %}
 				</div>
+
 				<div class="col s12 m3 l3 blog-sidebar">
 					{% include 'partials/sidebar.html.twig' %}
 				</div>
