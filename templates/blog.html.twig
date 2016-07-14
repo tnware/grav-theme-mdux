@@ -27,13 +27,11 @@
 
 	{% block pagination %}
 		{% if config.plugins.pagination.enabled and collection.params.pagination %}
-			<div class="container">
 				<div class="row center-align">
 					<div class="col s12 m9 l9">
 						{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
 					</div>
 				</div>
-			</div>
 		{% endif %}
 	{% endblock %}
 {% endembed %}
