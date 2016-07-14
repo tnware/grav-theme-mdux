@@ -33,11 +33,9 @@
   }
 
 #content {
-  width: 50%;
-  height: 400px;
+  width: auto;;
   background-color: #ddd;
   z-index: 3;
-  margin-top: 80px;
   box-shadow: 1px 1px 1px 1px #ccc;
 
   }
