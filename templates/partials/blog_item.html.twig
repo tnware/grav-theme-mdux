@@ -21,6 +21,7 @@
             </span>
            </div>
            <div class="card-content">
+						 <div class="row">
            {% if page.header.continue_link is sameas(false) %}
        			<p>{{ page.content }}</p>
        			{% if not truncate %}
@@ -34,6 +35,7 @@
        			<p>{{ page.content }}</p>
        			{% set show_prev_next = true %}
        		{% endif %}
+						</div>
            </div>
            <div class="card-action">
            {% if show_prev_next %}
