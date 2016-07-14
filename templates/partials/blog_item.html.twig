@@ -7,21 +7,19 @@
        			{{ page.media.images|first.cropZoom(900,300).html('', '', 'responsive-img blog-header-image') }}
        		{% endif %}
              {% if page.header.link %}
-						 <div class="row">
          			<h4>
          				{% if page.header.continue_link is not sameas(false) %}
          					<a href="{{ page.url }}"><i class="mdi mdi-chevron-double-right"></i></a>
          				{% endif %}
          				<a href="{{ page.header.link }}">{{ page.title }}</a>
          			</h4>
-						</div>
          		{% else %}
-							<div class="row">
          			<h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
-							</div>
          		{% endif %}
             <span class="list-blog-date">
+							<div class="row">
               <i class="mdi mdi-calendar"></i> {{ page.date|date("F") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
+						</div>
             </span>
            </div>
            <div class="card-content">
