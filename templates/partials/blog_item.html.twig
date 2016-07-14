@@ -52,14 +52,16 @@
                {% endif %}
              </p>
            {% endif %}<br>
-          <a href="{{ page.url }}">Continue Reading...</a><br>
+          <a href="{{ page.url }}">Continue Reading...</a>
              {% if page.taxonomy.tag %}
-               <span class="header-tags chip right-align">
+						 <div class="col right-align">
+               <span class="header-tags chip">
                  {% for tag in page.taxonomy.tag %}
                  <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag|upper }}</a>
                  {% endfor %}
 								 <i class="material-icons">close</i>
                </span>
+						 </div>
              {% endif %}
            </div>
          </div>
