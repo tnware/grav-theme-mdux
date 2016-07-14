@@ -1,4 +1,4 @@
-{% extends 'partials/simplesearch_base.html.twig' %}
+{% extends 'partials/base.html.twig' %}
 
 {% block content %}
 	<div class="container">
@@ -11,7 +11,7 @@
 					{% include 'partials/simplesearch_item.html.twig' with {'page':page, 'truncate':true} %}
 				{% endfor %}
 			</div>
-			
+
 			<div class="col s0 m4 l4 blog-sidebar">
 				{% include 'partials/sidebar.html.twig' %}
 			</div>
