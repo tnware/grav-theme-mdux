@@ -12,7 +12,7 @@
 	{% endif %}
 
 	{% block content %}
-				<div class="col s12 m9 l9 blog-main">
+				<div class="col s12 m9 l9 blog-main grey lighten-2">
 					{% for child in collection %}
 						{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
 					{% endfor %}
