@@ -25,16 +25,16 @@
            <div class="card-content">
 						 <div class="row">
            {% if page.header.continue_link is sameas(false) %}
-       			<p>{{ page.content }}</p>
+       			<p class="flow-text">{{ page.content }}</p>
        			{% if not truncate %}
        			{% set show_prev_next = true %}
        			{% endif %}
        		{% elseif truncate and page.summary != page.content %}
-       			<p>{{ page.summary }}</p>
+       			<p class="flow-text">{{ page.summary }}</p>
        		{% elseif truncate %}
-       			<p>{{ page.content|truncate(550) }}</p>
+       			<p class="flow-text">{{ page.content|truncate(550) }}</p>
        		{% else %}
-       			<p>{{ page.content }}</p>
+       			<p class="flow-text">{{ page.content }}</p>
        			{% set show_prev_next = true %}
        		{% endif %}
 						</div>
