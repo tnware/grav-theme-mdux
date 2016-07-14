@@ -1,50 +1,135 @@
+<<<<<<< HEAD
 {% embed 'partials/base.html.twig' %}
+
 	{% set collection = page.collection() %}
-	{% set base_url = page.url %}
-	{% set feed_url = base_url %}
-
-	{% if base_url == '/' %}
-		{% set base_url = '' %}
-	{% endif %}
-
-	{% if base_url == base_url_relative %}
-		{% set feed_url = base_url~'/'~page.slug %}
-	{% endif %}
 
 	{% block content %}
-		<div class="header">
-			<div class="container">
-				{{ page.content }}
+		{% set blog_image = page.media.images|first.grayscale().contrast(20).brightness(-100).colorize(-35,81,122) %}
+
+			{% if config.plugins.breadcrumbs.enabled %}
+			<div class="row">
+				{% include 'partials/breadcrumbs.html.twig' %}
+			</div>
+			{% endif %}
+
+			<div class="col s12 m3 l3">
+        <ul class="collection with-header">
+    <li class="collection-header"><h5>Header</h5></li>
+    <a href="#!" class="collection-item blue-text">Link 1</a>
+    <a href="#!" class="collection-item active blue">Link 2</a>
+    <a href="#!" class="collection-item blue-text">Link 3</a>
+    <a href="#!" class="collection-item blue-text">Link 4</a>
+  </ul>
+
+        <ul class="collection">
+           <li class="collection-item avatar">
+              <i class="material-icons circle amber">group_work</i>
+             <span class="title">Title</span>
+             <p>First Line <br>
+                Second Line
+             </p>
+             <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+           </li>
+           <li class="collection-item avatar">
+             <i class="material-icons circle">folder</i>
+             <span class="title">Title</span>
+             <p>First Line <br>
+                Second Line
+             </p>
+             <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+           </li>
+           <li class="collection-item avatar">
+             <i class="material-icons circle green">insert_chart</i>
+             <span class="title">Title</span>
+             <p>First Line <br>
+                Second Line
+             </p>
+             <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+           </li>
+           <li class="collection-item avatar">
+             <i class="material-icons circle red">play_arrow</i>
+             <span class="title">Title</span>
+             <p>First Line <br>
+                Second Line
+             </p>
+             <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+           </li>
+         </ul>
+				{% include 'partials/sidebar.html.twig' with {'blog':page} %}
+      </div>
+
+											<div class="col s12 m9 l9">
+
+													{% for child in collection %}
+																{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+														{% endfor %}
+						              </div>
+
+
+
+		<div class="col width-fill">
+			<div id="listing" class="col">
+
+								{% if config.plugins.pagination.enabled and collection.params.pagination %}
+										{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+								{% endif %}
 			</div>
 		</div>
-		<div class="container">
+
+	{% endblock %}
+
+{% endembed %}
+=======
+	{% embed 'partials/base.html.twig' %}
+
+		{% set collection = page.collection() %}
+
+		{% block content %}
+			{% set blog_image = page.media.images|first.grayscale().contrast(20).brightness(-100).colorize(-35,81,122) %}
+
+			<div class="section">
+			{% if config.plugins.breadcrumbs.enabled %}
 			<div class="row">
-				<div class="col s12 m8 l8 blog-main">
-					{% if config.plugins.breadcrumbs.enabled %}
-						{% include 'partials/breadcrumbs.html.twig' %}
-					{% endif %}
+				{% include 'partials/breadcrumbs.html.twig' %}
+			</div>
+			{% endif %}
+			</div>
+
+			<div class="container">
+
+			<div class="row">
+				<div class="col s12 grey darken-2"><p>s12</p></div>
+			</div>
+
+			<div class="row">
+
+					<div class="col s12 m9 l9">
 
 					{% for child in collection %}
-						{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
-					{% endfor %}
-				</div>
+								{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+						{% endfor %}
 
-				<div class="col s0 m4 l4 blog-sidebar">
-					{% include 'partials/sidebar.html.twig' %}
-				</div>
-			</div>
-		</div>
-	{% endblock %}
-
-	{% block pagination %}
-		{% if config.plugins.pagination.enabled and collection.params.pagination %}
-			<div class="container">
-				<div class="row center-align">
-					<div class="col s12 m8 l8">
-						{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
 					</div>
+
+					</div>
+					<div class="col s12 m3 l3">{% include 'partials/sidebar.html.twig' with {'blog':page} %}</div>
+			</div>
+			<div class="row">
+					<div class="col s12 yellow">
+
+					{% if config.plugins.pagination.enabled and collection.params.pagination %}
+							{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+					{% endif %}
+
+					</div>
+			</div>
+
+				<div class="section">
+
 				</div>
 			</div>
-		{% endif %}
-	{% endblock %}
-{% endembed %}
+
+		{% endblock %}
+
+	{% endembed %}
+>>>>>>> parent of f23ba6e... blog...
