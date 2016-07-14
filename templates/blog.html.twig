@@ -1,52 +1,50 @@
-	{% embed 'partials/base.html.twig' %}
+{% embed 'partials/base.html.twig' %}
+	{% set collection = page.collection() %}
+	{% set base_url = page.url %}
+	{% set feed_url = base_url %}
 
-		{% set collection = page.collection() %}
+	{% if base_url == '/' %}
+		{% set base_url = '' %}
+	{% endif %}
 
-		{% block content %}
-			{% set blog_image = page.media.images|first.grayscale().contrast(20).brightness(-100).colorize(-35,81,122) %}
+	{% if base_url == base_url_relative %}
+		{% set feed_url = base_url~'/'~page.slug %}
+	{% endif %}
 
-			<div class="section">
-			{% if config.plugins.breadcrumbs.enabled %}
-			<div class="row">
-				{% include 'partials/breadcrumbs.html.twig' %}
-			</div>
-			{% endif %}
-			</div>
-
+	{% block content %}
+		<div class="header">
 			<div class="container">
-
-			<div class="row">
-				<div class="col s12 grey darken-2"><p>s12</p></div>
+				{{ page.content }}
 			</div>
-
+		</div>
+		<div class="container">
 			<div class="row">
-
-					<div class="col s12 m9 l9">
-
-					{% for child in collection %}
-								{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
-						{% endfor %}
-
-					</div>
-
-					</div>
-					<div class="col s12 m3 l3">{% include 'partials/sidebar.html.twig' with {'blog':page} %}</div>
-			</div>
-			<div class="row">
-					<div class="col s12 yellow">
-
-					{% if config.plugins.pagination.enabled and collection.params.pagination %}
-							{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+				<div class="col s12 m8 l8 blog-main">
+					{% if config.plugins.breadcrumbs.enabled %}
+						{% include 'partials/breadcrumbs.html.twig' %}
 					{% endif %}
 
-					</div>
-			</div>
+					{% for child in collection %}
+						{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+					{% endfor %}
+				</div>
 
-				<div class="section">
-
+				<div class="col s0 m4 l4 blog-sidebar">
+					{% include 'partials/sidebar.html.twig' %}
 				</div>
 			</div>
+		</div>
+	{% endblock %}
 
-		{% endblock %}
-
-	{% endembed %}
+	{% block pagination %}
+		{% if config.plugins.pagination.enabled and collection.params.pagination %}
+			<div class="container">
+				<div class="row center-align">
+					<div class="col s12 m8 l8">
+						{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	{% endblock %}
+{% endembed %}
