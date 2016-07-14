@@ -1,18 +1,12 @@
 {% extends 'partials/base.html.twig' %}
-{% block content %}
 
-<div class="col">
-<div class="cell panel">
-    <div class="header">
-        <h1>{{ 'ERROR'|t }} {{ page.header.http_response_code }}</h1>
-    </div>
-    <div class="body">
-        <div class="cell">
-        <p>
-          {{ page.content }}
-        </p>
-        </div>
-    </div>
-  </div>
-</div>
+{% block content %}
+	<div id="error">
+		<div>
+			<h1>Error {{ page.header.http_response_code }}</h1>
+			<p>
+				{{ page.content }}
+			</p>
+		</div>
+	</div>
 {% endblock %}
