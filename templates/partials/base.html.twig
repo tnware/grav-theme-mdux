@@ -32,10 +32,10 @@
         {% endblock head %}
       </head>
 <body>
-<div id="color-bar">
+
 {% include 'partials/nav.html.twig' %}
-</div>
-<div class="content">
+
+<div class="container">
   <div class="section">
     {% block content %} {{ page.content }} {% endblock %}
   </div>
