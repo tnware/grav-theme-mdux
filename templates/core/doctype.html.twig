@@ -27,13 +27,5 @@
             {{ assets.css() }}
         {% endblock %}
 
-        {% block javascripts %}
-            {% do assets.add('theme://js/jquery-2.1.1.min.js', 101) %}
-            {% do assets.add('theme://js/materialize.js') %}
-            {% do assets.add('theme://js/site/init.js') %}
-            <!--  Scripts-->
-
-            {{ assets.js() }}
-        {% endblock %}
         {% endblock head %}
       </head>
