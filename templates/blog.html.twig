@@ -13,13 +13,12 @@
 
 	{% block content %}
 		<div class="header s12">
-			<div class="container">
+			<div class="row">
 				{% if config.plugins.breadcrumbs.enabled %}
 					{% include 'partials/breadcrumbs.html.twig' %}
 				{% endif %}
 			</div>
 		</div>
-		<div class="container">
 			<div class="row">
 				<div class="col s12 m9 l9 blog-main">
 					{% for child in collection %}
@@ -31,7 +30,6 @@
 					{% include 'partials/sidebar.html.twig' %}
 				</div>
 			</div>
-		</div>
 	{% endblock %}
 
 	{% block pagination %}
