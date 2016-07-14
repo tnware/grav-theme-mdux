@@ -7,7 +7,7 @@
 			{% if crumbs|length > 1 or config.plugins.breadcrumbs.show_all %}
 				<div class="breadcrumbs">
 				{% for crumb in crumbs %}
-					<a href="{{ crumb.url }}"> {{ crumb.menu }} </a>
+					<a href="{{ crumb.url }}" class="breadcrumb"> {{ crumb.menu }} </a>
 				{% endfor %}
 				</div>
 			{% endif %}
