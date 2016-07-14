@@ -1,5 +1,39 @@
-{% include 'core/doctype.html.twig' %}
-{% include 'core/header.html.twig' %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% if header.description %}
+        <meta name="description" content="{{ header.description }}">
+        {% else %}
+        <meta name="description" content="{{ site.description }}">
+        {% endif %}
+        {% if header.robots %}
+        <meta name="robots" content="{{ header.robots }}">
+        {% endif %}
+        <link rel="icon" type="image/png" href="{{ theme_url }}/img/favicon.png">
+        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+
+        {% block stylesheets %}
+            {# Cascade core CSS #}
+            {% do assets.add('theme://css/materialize.css',101) %}
+
+        {# CSS cascade custom #}
+            {% do assets.add('theme://css/style.css',100) %}
+            {% do assets.add('theme://css/style.css',100) %}
+            {% do assets.addCss('https://fonts.googleapis.com/icon?family=Material+Icons') %}
+            {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') %}
+
+            {{ assets.css() }}
+        {% endblock %}
+
+        {% endblock head %}
+      </head>
+<body>
+
+{% include 'partials/nav.html.twig' %}
 
 <div class="container">
   <div class="section">
@@ -12,4 +46,7 @@
       </div>
 </div>
 
-{% include 'core/footer.html.twig' %}
+{% include 'partials/footer.html.twig' %}
+
+</body>
+</html>
