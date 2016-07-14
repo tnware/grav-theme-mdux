@@ -33,14 +33,14 @@
       </head>
 <body class="grey lighten-3">
 {% include 'partials/nav.html.twig' %}
-<div id="color-bar">
-  <div class="col s12 z-depth-1">
-    <div class="row">
-      {% if config.plugins.breadcrumbs.enabled %}
-        {% include 'partials/breadcrumbs.html.twig' %}
-      {% endif %}
-    </div>
+<div class="col s12 z-depth-1">
+  <div class="row">
+    {% if config.plugins.breadcrumbs.enabled %}
+      {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
   </div>
+</div>
+<div id="color-bar">
 </div>
 <div class="container white z-depth-1">
   <div class="section white">
