@@ -5,7 +5,7 @@
 		<nav>
 			<div class="nav-wrapper blue">
 			{% if crumbs|length > 1 or config.plugins.breadcrumbs.show_all %}
-				<div class="row">
+				<div class="container">
 				{% for crumb in crumbs %}
 					<a href="{{ crumb.url }}" class="breadcrumb"> {{ crumb.menu }} </a>
 				{% endfor %}
