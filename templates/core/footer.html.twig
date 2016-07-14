@@ -8,13 +8,14 @@
 
       </div>
       <div class="col l3 s12">
-        <h5 class="white-text">Settings</h5>
+        <h5 class="white-text">Navigation</h5>
         <ul>
-          <li><a class="white-text" href="index.html">Home</a></li>
-          <li><a class="white-text" href="card.html">Test Page</a></li>
-          <li><a class="white-text" href="right-sidebar.html">Right Sidebar</a></li>
-          <li><a class="white-text" href="left-sidebar.html">Left Sidebar</a></li>
-          <li><a class="white-text" href="no-sidebar.html">no Sidebar</a></li>
+        {% for page in pages.children %}
+        {% if page.visible %}
+        {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+        <li class="white-text"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+        {% endif %}
+        {% endfor %}
         </ul>
       </div>
       <div class="col l3 s12">
@@ -30,7 +31,7 @@
   </div>
   <div class="footer-copyright grey darken-3">
               <div class="container">
-              © 2014 Copyright Text
+              © 2016 TYLER WOODS
               <a class="grey-text text-lighten-4 right" href="#!">#</a>
               </div>
             </div>
