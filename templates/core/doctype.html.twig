@@ -14,7 +14,6 @@
         <meta name="robots" content="{{ header.robots }}">
         {% endif %}
         <link rel="icon" type="image/png" href="{{ theme_url }}/img/favicon.png">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
 
         {% block stylesheets %}
@@ -23,6 +22,8 @@
 
         {# CSS cascade custom #}
             {% do assets.add('theme://css/style.css',100) %}
+            {% do assets.add('theme://css/style.css',100) %}
+            {% do assets.addCss('https://fonts.googleapis.com/icon?family=Material+Icons') %}
 
             {{ assets.css() }}
         {% endblock %}
