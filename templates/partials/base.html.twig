@@ -1,14 +1,15 @@
 {% include 'core/doctype.html.twig' %}
 {% include 'core/header.html.twig' %}
 
-<div class="body">
-  <div class="cell">
-      <div class="col">
-            <div class="cell">
-{% block content %} {{ page.content }} {% endblock %}
-            </div>
-      </div>
+<div class="container">
+  <div class="section">
+    {% block content %} {{ page.content }} {% endblock %}
   </div>
+  <br>
+    <br>
+      <div class="section">
+
+      </div>
 </div>
 
 {% include 'core/footer.html.twig' %}
