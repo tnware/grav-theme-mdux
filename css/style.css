@@ -36,7 +36,6 @@
 #content {
   width: auto;
   z-index: 3;
-  box-shadow: 1px 1px 1px 1px #ccc;
   position: relative;
   margin-top: -180px;
   }
