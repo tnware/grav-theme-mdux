@@ -10,7 +10,7 @@
 	{% if base_url == base_url_relative %}
 		{% set feed_url = base_url~'/'~page.slug %}
 	{% endif %}
-
+<div class="row">
 	{% block content %}
 				<div class="col s12 m9 l9 blog-main grey lighten-2">
 					{% for child in collection %}
@@ -22,7 +22,7 @@
 					{% include 'partials/sidebar.html.twig' %}
 				</div>
 	{% endblock %}
-
+</div>
 	{% block pagination %}
 		{% if config.plugins.pagination.enabled and collection.params.pagination %}
 
