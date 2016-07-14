@@ -1,3 +1,4 @@
+<div class="row">
        <div class="col s12">
          <div class="card hoverable z-depth-1">
            <div class="card-image">
@@ -23,9 +24,8 @@
 					</span>
            </div>
            <div class="card-content">
-						 <div class="row">
            {% if page.header.continue_link is sameas(false) %}
-       			<p class="flow-text">{{ page.content }}</p>
+       			<p>{{ page.content }}</p>
        			{% if not truncate %}
        			{% set show_prev_next = true %}
        			{% endif %}
@@ -37,7 +37,6 @@
        			<p class="flow-text">{{ page.content }}</p>
        			{% set show_prev_next = true %}
        		{% endif %}
-						</div>
            </div>
            <div class="card-action">
            {% if show_prev_next %}
@@ -73,3 +72,4 @@
            </div>
          </div>
        </div>
+</div>
