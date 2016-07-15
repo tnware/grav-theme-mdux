@@ -14,6 +14,7 @@
 	{% block content %}
 	<div class="row">
 				<div class="col s12 m8 l8">
+					{{ page.content }}
 					{% for child in collection %}
 						{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
 					{% endfor %}
