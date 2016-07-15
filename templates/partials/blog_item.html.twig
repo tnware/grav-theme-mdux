@@ -26,10 +26,6 @@
            </div>
            <div class="card-content">
            {% if page.header.continue_link is sameas(false) %}
-           <h4><a class="white-text" href="{{ page.url }}">{{ page.title }}</a></h4><br>
-           <span class="list-blog-date">
-             <i class="mdi mdi-calendar"></i> {{ page.date|date("F") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
-           </span><br><br>
        			<p>{{ page.content }}</p>
        			{% if not truncate %}
        			{% set show_prev_next = true %}
