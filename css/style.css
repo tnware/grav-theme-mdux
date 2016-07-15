@@ -13,10 +13,6 @@
 	font-size: inherit;
 }
 
-  * {
-  margin: 0 auto;
-  }
-
   h4.shadow {
       color: white;
       text-shadow: 2px 2px 4px #000000;
