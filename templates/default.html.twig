@@ -1,6 +1,7 @@
-{% extends 'partials/base.html.twig' %}
+{% embed 'partials/base.html.twig' %}
 <div class="row">
 {% block content %}
 	{{ page.content }}
 {% endblock %}
 </div>
+{% endembed %}
