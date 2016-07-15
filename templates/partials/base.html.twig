@@ -47,13 +47,11 @@
 </div>
 <div id="color-bar">
 </div>
-<div id="content" class="container white z-depth-1">
-  <div class="col white">
-    <div id="content">
+<div id="content">
+  <div class="container white">
       <div class="container">
     {% block content %} {{ page.content }} {% endblock %}
       </div>
-    </div>
   </div>
 </div>
 {% include 'partials/footer.html.twig' %}
