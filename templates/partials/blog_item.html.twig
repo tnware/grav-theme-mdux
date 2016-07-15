@@ -61,9 +61,9 @@
 				</div>
              {% if page.taxonomy.tag %}
 						 <div class="col s6">
-               <span class="header-tags chip right-align">
+               <span class="header-tags right-align">
                  {% for tag in page.taxonomy.tag %}
-                 <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag|upper }}</a>
+                 <a class="chip" href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag|upper }}</a>
                  {% endfor %}
 								 <i class="material-icons">close</i>
                </span>
