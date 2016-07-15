@@ -19,7 +19,7 @@
          			<h4 class="shadow"><a class="white-text" href="{{ page.url }}">{{ page.title }}</a></h4>
          		{% endif %}
             <span class="list-blog-date">
-              <i class="mdi mdi-calendar white-text shadow"></i> {{ page.date|date("F") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
+              <i class="mdi mdi-calendar white-text"></i> {{ page.date|date("F") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
             </span>
 					</div>
 					</span>
@@ -55,9 +55,9 @@
                {% endif %}
              </p>
            {% endif %}
-					 <div class="row">"
+					 <div class="row">
 					 <div class="col s6">
-          <span class="legt-align"><a href="{{ page.url }}">Continue Reading...</a></span>
+          <span class="left-align"><a href="{{ page.url }}">Continue Reading...</a></span>
 				</div>
              {% if page.taxonomy.tag %}
 						 <div class="col s6">
