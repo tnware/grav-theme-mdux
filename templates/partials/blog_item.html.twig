@@ -10,17 +10,17 @@
           <div class="container">
 					<span class="card-title">
              {% if page.header.link %}
-         			<h4 class="shadow">
+         			<h5>
          				{% if page.header.continue_link is not sameas(false) %}
          					<a href="{{ page.url }}"><i class="mdi mdi-chevron-double-right"></i></a>
          				{% endif %}
-         				<a href="{{ page.header.link }}">{{ page.title }}</a>
-         			</h4>
+         				<a class="grey-text darken-2-text"href="{{ page.header.link }}">{{ page.title }}</a>
+         			</h5>
          		{% else %}
-         			<h4 class="shadow"><a class="white-text" href="{{ page.url }}">{{ page.title }}</a></h4>
+         			<h5><a class="grey-text darken-2-text" href="{{ page.url }}">{{ page.title }}</a></h5>
          		{% endif %}
             <span class="list-blog-date">
-              <i class="mdi mdi-calendar white-text"></i> {{ page.date|date("F") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
+              <i class="mdi mdi-calendar"></i> {{ page.date|date("F") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
             </span>
 					</span>
            </div>
