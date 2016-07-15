@@ -12,6 +12,7 @@
 	{% endif %}
 
 	{% block content %}
+	<div class="row">
 				<div class="col s12 m8 l8">
 					{{ page.content }}
 					{% for child in collection %}
@@ -22,6 +23,7 @@
 				<div class="col s12 m4 l4">
 					{% include 'partials/sidebar.html.twig' %}
 				</div>
+	</div>
 	<div class="row">
 		{% block pagination %}
 			{% if config.plugins.pagination.enabled and collection.params.pagination %}
