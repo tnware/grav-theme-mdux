@@ -23,15 +23,16 @@
 					{% include 'partials/sidebar.html.twig' %}
 				</div>
 	</div>
-	{% endblock %}
+	<div class="row">
+		{% block pagination %}
+			{% if config.plugins.pagination.enabled and collection.params.pagination %}
 
-	{% block pagination %}
-		{% if config.plugins.pagination.enabled and collection.params.pagination %}
-
-				<div class="row center-align">
-					<div class="col s12 m8 l8">
-						{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+					<div class="row center-align">
+						<div class="col s12 m8 l8">
+							{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+						</div>
 					</div>
-				</div>
-		{% endif %}
+			{% endif %}
+		{% endblock %}
+	</div>
 	{% endblock %}
