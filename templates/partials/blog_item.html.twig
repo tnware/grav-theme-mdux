@@ -14,12 +14,12 @@
          				{% if page.header.continue_link is not sameas(false) %}
          					<a href="{{ page.url }}"><i class="mdi mdi-chevron-double-right"></i></a>
          				{% endif %}
-         				<a class="grey-text darken-2-text"href="{{ page.header.link }}">{{ page.title }}</a>
+         				<a href="{{ page.header.link }}">{{ page.title }}</a>
          			</span>
          		{% else %}
-         			<span><a class="grey-text darken-2-text" href="{{ page.url }}">{{ page.title }}</a></span>
+         			<span><a href="{{ page.url }}">{{ page.title }}</a></span>
          		{% endif %}
-            <h5>
+            <h5 class="grey-text darken-2-text">
               <i class="mdi mdi-calendar"></i> {{ page.date|date("F") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
             </h5>
 					</span>
