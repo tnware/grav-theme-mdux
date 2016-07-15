@@ -11,7 +11,7 @@
              {% if page.header.link %}
          			<h4 class="white-text">
          				{% if page.header.continue_link is not sameas(false) %}
-         					<a href="{{ page.url }}"><i class="mdi mdi-chevron-double-right"></i>{{ page.title }}</a>
+         					<a href="{{ page.url }}"><i class="mdi mdi-chevron-double-right"></i></a>
          				{% endif %}
          				<a href="{{ page.header.link }}">{{ page.title }}</a>
          			</h4>
@@ -26,6 +26,7 @@
            </div>
            <div class="card-content">
            {% if page.header.continue_link is sameas(false) %}
+           <h4><a class="white-text" href="{{ page.url }}">{{ page.title }}</a></h4><br>
        			<p>{{ page.content }}</p>
        			{% if not truncate %}
        			{% set show_prev_next = true %}
