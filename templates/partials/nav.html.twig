@@ -11,6 +11,9 @@
     </ul>
 
       <ul id="nav-mobile" class="side-nav">
+        <li class="logo">
+
+        </li>
       {% for page in pages.children %}
       {% if page.visible %}
       {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
