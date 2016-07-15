@@ -6,7 +6,6 @@
        		{% else %}
        			{{ page.media.images|first.cropZoom(900,300).html('', '', 'responsive-img blog-header-image') }}
        		{% endif %}
-					<div class="row">
 					<span class="card-title">
              {% if page.header.link %}
          			<h4 class="shadow">
@@ -21,7 +20,6 @@
             <span class="list-blog-date">
               <i class="mdi mdi-calendar white-text"></i> {{ page.date|date("F") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
             </span>
-					</div>
 					</span>
            </div>
            <div class="card-content">
