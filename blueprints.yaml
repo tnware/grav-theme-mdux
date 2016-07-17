@@ -1,7 +1,7 @@
 name: MDUX
 version: 0.0.1
 testing: true
-description: "MDUX is a responsive HTML5/CSS3 theme that scales well for mobile."
+description: "MDUX is a strict implementation of Google's 'Material Design' standard. It scales for mobile, as intended."
 icon: empire
 author:
   name: Tyler Woods
