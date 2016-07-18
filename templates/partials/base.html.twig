@@ -48,13 +48,13 @@
 <div id="color-bar">
 </div>
 <div id="content">
-  <div class="container row flow-text white z-depth-1">
+  <div class="container flow-text white z-depth-1">
+<div class="row">
       <div class="col s12">
-        <h1>
-        </h1>
     {% block content %} {{ page.content }} {% endblock %}
         <div class="section"></div>
       </div>
+</div>
   </div>
 </div>
 {% include 'partials/footer.html.twig' %}
