@@ -1,11 +1,14 @@
-<div class="card z-depth-3">
-  <div class="card-image">
+       <div class="row">
+         <div class="card hoverable z-depth-1">
+           <div class="card-image">
            {% if big_header %}
        			{{ page.media.images|first.cropResize(900,600).html('', '', 'responsive-img') }}
        		{% else %}
        			{{ page.media.images|first.cropZoom(900,300).html('', '', 'responsive-img') }}
        		{% endif %}
-          <span class="card-title">
+          </div>
+          <div class="container">
+					<span class="card-title">
              {% if page.header.link %}
          			<h4>
          				{% if page.header.continue_link is not sameas(false) %}
@@ -20,7 +23,7 @@
               <i class="fa fa-calendar" aria-hidden="true"></i> {{ page.date|date("F") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
             </h5>
 					</span>
-          </div>
+           </div>
            <div class="card-content">
            {% if page.header.continue_link is sameas(false) %}
        			<p>{{ page.content }}</p>
@@ -52,7 +55,7 @@
                {% endif %}
              </p>
            {% endif %}
-
+					 <div class="row">
 					 <div class="col s12 m6 l6">
           <span class="left-align"><a href="{{ page.url }}"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Continue Reading...</a></span>
 				</div>
