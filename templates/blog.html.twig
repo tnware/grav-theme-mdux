@@ -19,6 +19,7 @@
 				<div class="col s12 m4 l4">
 					{% include 'partials/sidebar.html.twig' %}
 				</div>
+	<div class="row">
 		{% block pagination %}
 			{% if config.plugins.pagination.enabled and collection.params.pagination %}
 
@@ -29,6 +30,6 @@
 					</div>
 			{% endif %}
 		{% endblock %}
-
+	</div>
 	{% endblock %}
 	{% endembed %}
