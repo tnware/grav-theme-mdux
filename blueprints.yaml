@@ -1,13 +1,14 @@
 name: MDUX
-version: 0.9.1
+version: 0.9.5
 testing: true
-description: "MDUX is a strict implementation of Google's 'Material Design' standard. It scales for mobile, as intended."
+description: "MDUX is an implementation of Google's 'Material Design' standard. It scales for mobile, as intended."
 icon: empire
 author:
   name: Tyler Woods
   email: tyler@tnware.net
   url: http://tnware.net
-homepage: https://github.com/tnware/grav-theme-mdux
+homepage: http://mdux.io
+demo: http://mdux.io
 keywords: mdux, theme, html5, css3, material, design, android, google
 bugs: https://github.com/tnware/grav-theme-mdux/issues
 license: MIT

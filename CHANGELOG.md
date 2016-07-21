@@ -1,5 +1,5 @@
-# v0.9.1
-## 07/17/2016
+# v0.9.5
+## 07/21/2016
 
 1. [](#new)
     * Lots
@@ -7,14 +7,3 @@
     * Everything
 3. [](#bugfix)
     * Tons
-
-
-# v0.0.1
-## 07/13/2016
-
-1. [](#new)
-    * Initial Everything
-2. [](#improved)
-    * Nothing
-3. [](#bugfix)
-    * Nothing

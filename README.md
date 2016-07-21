@@ -4,6 +4,11 @@
 
 ![Screenshot](screenshot.jpg)
 
-### WIP 
+### WIP
+v 0.9.5
+
+#### Bugs: 
+
+- looking (:
 
 --TNW
