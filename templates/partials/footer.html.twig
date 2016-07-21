@@ -1,9 +1,16 @@
 <footer class="footer grey darken-2">
   <div class="container">
     <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Bacon ipsum dolor</h5>
-        <p class="grey-text text-lighten-4">Shoulder pancetta pastrami brisket. Tri-tip strip steak pork swine, shank doner pancetta. Prosciutto ham pig strip steak. Shankle rump short loin corned beef, leberkas boudin frankfurter tri-tip shoulder tongue. Capicola flank tenderloin turducken meatball kielbasa.</p>
+      <div class="col l6 s12 white-text">
+
+        {% block footer %}
+       {% set content = pages.find('/footer').content %}
+       {% if content %}
+           <div class="row">
+                {{ content }}
+           </div>
+       {% endif %}
+       {% endblock %}
 
 
       </div>
