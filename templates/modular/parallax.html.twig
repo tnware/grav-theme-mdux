@@ -1,7 +1,11 @@
 <div class="parallax-container">
   <div class="parallax"><img src="{{ page.media['parallax.jpg'].url }}"></div>
-  		{{ content }}
-
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Parallax</h2>
+      <p class="grey-text text-darken-3 lighten-3">{{ content }}</p>
+    </div>
+  </div>
       {% for button in page.header.buttons %}
         <a class="btn{% if button.primary %} btn-default{% endif %}" href="{{ base_url_relative }}{{ button.url }}">{{ button.text }}</a>
       {% endfor %}
