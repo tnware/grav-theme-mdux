@@ -4,7 +4,7 @@
 {% block content %}
 	{{ page.content }}
 	{% for module in page.collection() %}
-		<div class="modular-anchor" id="{{ _self.pageLinkName(module.menu) }}"></div>
+		<div class="section" id="{{ _self.pageLinkName(module.menu) }}"></div>
 		{{ module.content }}
 	{% endfor %}
 {% endblock %}
