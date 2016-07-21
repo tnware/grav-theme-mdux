@@ -12,6 +12,15 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+ul {
+  list-style-type: disc;
+  list-style-image: url(bullet.gif);
+  list-style-position: inside;
+}
+
+ul li {
+
+}
 
   h4.shadow {
       color: white;
@@ -54,9 +63,3 @@
   position: relative;
   margin-top: -250px;
   }
-
-    ul.content {
-      list-style-type: disc;
-      list-style-image: url(bullet.gif);
-      list-style-position: inside;
-    }
