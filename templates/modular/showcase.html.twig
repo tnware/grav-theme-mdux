@@ -1,11 +1,11 @@
   {% set showcase_image = page.media.images|first %}
 
   {% if showcase_image %}
-  <div class="modular-row showcase header" style="background-image: url({{ showcase_image.url }});">
-    <div class="container">
+  <div class="row showcase header" style="background-image: url({{ showcase_image.url }});">
+    <div class="col">
   {% else %}
-  <div class="modular-row showcase header">
-    <div class="container">
+  <div class="row showcase header">
+    <div class="col">
   {% endif %}
         {{ content }}
       </div>
