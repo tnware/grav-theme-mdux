@@ -24,7 +24,7 @@
         width: auto;
         z-index: 3;
         position: relative;
-        margin-top: -250px;
+        margin-top: 50px;
     }
     .chip i.material-icons {
         cursor: pointer;
