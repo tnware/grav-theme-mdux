@@ -23,8 +23,7 @@
                             ? 'active'
                             : '' %}
                         <li class="{{ current_page }}">
-                            <a href="{{ page.url }}">
-                                <i class="material-icons">keyboard_arrow_right</i>&nbsp;{{ page.menu }}</a>
+                            <a href="{{ page.url }}">{{ page.menu }}</a>
                         </li>
                     {% endif %}
                 {% endfor %}
