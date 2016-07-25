@@ -1,25 +1,36 @@
 <div class="navbar-fixed">
-  <nav class="blue darken-3 nav-shadow" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">{{ site.title }}</a>
+    <nav class="blue darken-3 nav-shadow" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">{{ site.title }}</a>
 
-    <ul class="right hide-on-med-and-down">
-      {% for page in pages.children %}
-      {% if page.visible %}
-      {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-        <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
-      {% endif %}
-      {% endfor %}
-    </ul>
+            <ul class="right hide-on-med-and-down">
+                {% for page in pages.children %}
+                    {% if page.visible %}
+                        {% set current_page = (page.active or page.activeChild)
+                            ? 'active'
+                            : '' %}
+                        <li class="{{ current_page }}">
+                            <a href="{{ page.url }}">{{ page.menu }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
 
-      <ul id="nav-mobile" class="side-nav">
-      {% for page in pages.children %}
-      {% if page.visible %}
-      {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-        <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
-      {% endif %}
-      {% endfor %}
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+            <ul id="nav-mobile" class="side-nav">
+                {% for page in pages.children %}
+                    {% if page.visible %}
+                        {% set current_page = (page.active or page.activeChild)
+                            ? 'active'
+                            : '' %}
+                        <li class="{{ current_page }}">
+                            <a href="{{ page.url }}">{{ page.menu }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
 </div>

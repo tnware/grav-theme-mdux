@@ -1,50 +1,63 @@
 <section class="list-item">
-	<div class="list-blog-header">
-		{% if page.header.link %}
-			<h4>
-				{% if page.header.continue_link is not sameas(false) %}
-					<a href="{{ page.url }}"><i class="mdi mdi-chevron-double-right"></i></a>
-				{% endif %}
-				<a href="{{ page.header.link }}">{{ page.title }}</a>
-			</h4>
-		{% else %}
-			<h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
-		{% endif %}
+    <div class="list-blog-header">
+        {% if page.header.link %}
+            <h4>
+                {% if page.header.continue_link is not sameas(false) %}
+                    <a href="{{ page.url }}">
+                        <i class="mdi mdi-chevron-double-right"></i>
+                    </a>
+                {% endif %}
+                <a href="{{ page.header.link }}">{{ page.title }}</a>
+            </h4>
+        {% else %}
+            <h4>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </h4>
+        {% endif %}
 
-		<span class="list-blog-date">
-			<i class="mdi mdi-calendar"></i> {{ page.date|date("F") }} {{ page.date|date("d") }}, {{ page.date|date("Y") }}
-		</span>
+        <span class="list-blog-date">
+            <i class="mdi mdi-calendar"></i>
+            {{ page.date|date("F") }}
+            {{ page.date|date("d") }},
+            {{ page.date|date("Y") }}
+        </span>
 
-		{% if page.taxonomy.tag %}
-			<span class="tags">
-				{% for tag in page.taxonomy.tag %}
-				<a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}"><span class="new badge">{{ tag|upper }}</span></a>
-				{% endfor %}
-			</span>
-		{% endif %}
-		
-		{% if big_header %}
-			{{ page.media.images|first.cropResize(900,600).html('', '', 'responsive-img blog-header-image') }}
-		{% else %}
-			{{ page.media.images|first.cropZoom(900,300).html('', '', 'responsive-img blog-header-image') }}
-		{% endif %}
-	</div>
-	
-	<div class="list-blog-content">
-		{% if page.header.continue_link is sameas(false) %}
-			<p>{{ page.content }}</p>
-			{% if not truncate %}
-			{% set show_prev_next = true %}
-			{% endif %}
-		{% elseif truncate and page.summary != page.content %}
-			<p>{{ page.summary }}</p>
-			<p><a href="{{ page.url }}">Continue Reading...</a></p>
-		{% elseif truncate %}
-			<p>{{ page.content|truncate(550) }}</p>
-			<p><a href="{{ page.url }}">Continue Reading...</a></p>
-		{% else %}
-			<p>{{ page.content }}</p>
-			{% set show_prev_next = true %}
-		{% endif %}
-	</div>
+        {% if page.taxonomy.tag %}
+            <span class="tags">
+                {% for tag in page.taxonomy.tag %}
+                    <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">
+                        <span class="new badge">{{ tag|upper }}</span>
+                    </a>
+                {% endfor %}
+            </span>
+        {% endif %}
+
+        {% if big_header %}
+            {{ page.media.images|first.cropResize(900,600).html('', '', 'responsive-img blog-header-image') }}
+        {% else %}
+            {{ page.media.images|first.cropZoom(900,300).html('', '', 'responsive-img blog-header-image') }}
+        {% endif %}
+    </div>
+
+    <div class="list-blog-content">
+        {% if page.header.continue_link is sameas(false) %}
+            <p>{{ page.content }}</p>
+            {% if not truncate %}
+                {% set show_prev_next = true %}
+            {% endif %}
+        {% elseif truncate and page.summary != page.content %}
+            <p>{{ page.summary }}</p>
+            <p>
+                <a href="{{ page.url }}">Continue Reading...</a>
+            </p>
+        {% elseif truncate %}
+            <p>{{ page.content|truncate(550) }}</p>
+            <p>
+                <a href="{{ page.url }}">Continue Reading...</a>
+            </p>
+        {% else %}
+            <p>{{ page.content }}</p>
+            {% set show_prev_next = true %}
+        {% endif %}
+    </div>
 </section>

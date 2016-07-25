@@ -1,22 +1,24 @@
 <nav>
-   <div class="nav-wrapper blue darken-2">
-     <form>
-       <div class="input-field">
-         <input id="search" type="text" required placeholder="Search..." value="{{ query }}" data-search-input="{{ base_url_absolute }}{{ config.plugins.simplesearch.route}}/query" />
-         <label for="search"><i class="material-icons">search</i></label>
-         <i class="material-icons">close</i>
-       </div>
-     </form>
-   </div>
- </nav>
+    <div class="nav-wrapper blue darken-2">
+        <form>
+            <div class="input-field">
+                <input id="search" type="text" required placeholder="Search..." value="{{ query }}" data-search-input="{{ base_url_absolute }}{{ config.plugins.simplesearch.route}}/query"/>
+                <label for="search">
+                    <i class="material-icons">search</i>
+                </label>
+                <i class="material-icons">close</i>
+            </div>
+        </form>
+    </div>
+</nav>
 <script>
-jQuery(document).ready(function($){
-    var input = $('[data-search-input]');
-    input.on('keypress', function(event) {
-        if (event.which == 13 && input.val().length > 3) {
-            event.preventDefault();
-            window.location.href = input.data('search-input') + '{{ config.system.param_sep }}' + input.val();
-        }
+    jQuery(document).ready(function($) {
+        var input = $('[data-search-input]');
+        input.on('keypress', function(event) {
+            if (event.which == 13 && input.val().length > 3) {
+                event.preventDefault();
+                window.location.href = input.data('search-input') + '{{ config.system.param_sep }}' + input.val();
+            }
+        });
     });
-});
 </script>
