@@ -27,11 +27,11 @@
 
                 {# CSS MDUX custom #}
                 {% do
-                    assets.add('theme://css/style.css', 10) %}
+                    assets.add('theme://css/style.css', 96) %}
                 {% do
-                    assets.addCss('https://fonts.googleapis.com/icon?family=Material+Icons') %}
+                    assets.addCss('https://fonts.googleapis.com/icon?family=Material+Icons', 98) %}
                 {% do
-                    assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') %}
+                    assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', 97) %}
 
                 {{ assets.css() }}
             {% endblock %}
