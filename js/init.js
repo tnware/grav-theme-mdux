@@ -1,6 +1,6 @@
 (function($) {
     $(function() {
-
+        $('.button-collapse').sideNav('hide');
           var window_width = $(window).width();
 
           // Detect touch screen and enable scrollbar if necessary
