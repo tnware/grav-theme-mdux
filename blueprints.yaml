@@ -27,10 +27,26 @@ form:
         validate:
           type: bool
 
-    color:
+    navcolor:
         type: text
         size: medium
-        label: Color
-        default: 'blue'
+        label: Navbar Color
+        default: 'blue darken-3'
+        validate:
+          type: text
+
+    barcolor:
+        type: text
+        size: medium
+        label: Secondary Color
+        default: 'blue darken-2'
+        validate:
+          type: text
+
+    footcolor:
+        type: text
+        size: medium
+        label: Footer Color
+        default: 'grey darken-2'
         validate:
           type: text
