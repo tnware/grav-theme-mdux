@@ -1,14 +1,1 @@
 enabled: true
-form:
-  validation: loose
-  fields:
-    nav.color:
-        type: form
-        label: Navbar Color
-        default: blue darken-3
-        validate:
-          type: text
-color:
-  nav: red darken-3
-  bar: blue
-  footer: grey darken-2
