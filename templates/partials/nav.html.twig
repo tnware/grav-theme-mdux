@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
     <nav class="{{ config.themes.mdux.navcolor }} nav-shadow" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">{{ site.title }}</a>
+            <a id="logo-container" href="{{ site.url }}" class="brand-logo">{{ site.title }}</a>
 
             <ul class="right hide-on-med-and-down">
                 {% for page in pages.children %}
