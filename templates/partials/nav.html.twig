@@ -29,7 +29,12 @@
                         </a>
                     </div>
                 </li>
-
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li>
+                    <a class="subheader">Navigation</a>
+                </li>
                 {% for page in pages.children %}
                     {% if page.visible %}
                         {% set current_page = (page.active or page.activeChild)
