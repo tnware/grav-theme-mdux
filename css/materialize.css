@@ -3416,7 +3416,9 @@ input[type=range] + .thumb {
 
 @media only screen and (min-width: 601px) {
   .container {
-    width: 85%;
+    width: 100%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
 }
 
