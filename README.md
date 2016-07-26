@@ -5,10 +5,8 @@
 ![Screenshot](screenshot.jpg)
 
 ### WIP
-v 0.9.5
+v 0.9.6
 
-#### Bugs: 
+#### NEW:
 
-- looking (:
-
---TNW
+- You can now change color of the theme from within Grav Admin

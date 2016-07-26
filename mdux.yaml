@@ -1,6 +1,6 @@
 enabled: true
 navcolor: blue darken-3
 barcolor: blue darken-2
-color: grey darken-2
+footcolor: grey darken-2
 dropdown:
   enabled: false
