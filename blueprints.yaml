@@ -15,3 +15,10 @@ license: MIT
 
 form:
   validation: loose
+  fields:
+    nav.color:
+        type: form
+        label: Navbar Color
+        default: blue darken-3
+        validate:
+          type: text
