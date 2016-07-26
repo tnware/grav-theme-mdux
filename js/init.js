@@ -6,10 +6,10 @@
             menuWidth: 300, // Default is 240
             closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
         });
-
+        $('.carousel').carousel();
         $(document).ready(function(){
           $('.carousel').carousel();
         });
-            
+
     }); // end of document ready
 })(jQuery); // end of jQuery name space
