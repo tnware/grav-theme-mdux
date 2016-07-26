@@ -12,3 +12,25 @@ demo: http://mdux.io
 keywords: mdux, theme, html5, css3, material, design, android, google
 bugs: https://github.com/tnware/grav-theme-mdux/issues
 license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+
+    color:
+        type: text
+        size: medium
+        label: Color
+        default: 'blue'
+        validate:
+          type: text
