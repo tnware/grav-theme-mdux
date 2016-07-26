@@ -38,11 +38,11 @@
 
             {% block javascripts %}
                 {% do
-                    assets.add('https://code.jquery.com/jquery-2.1.4.min.js', 101) %}
+                    assets.add('https://code.jquery.com/jquery-2.1.4.min.js', 99) %}
                 {% do
-                    assets.add('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js') %}
+                    assets.add('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js', 100) %}
                 {% do
-                    assets.add('theme://js/init.js') %}
+                    assets.add('theme://js/init.js', 101) %}
 
                 {{ assets.js() }}
             {% endblock %}
