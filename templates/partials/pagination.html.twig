@@ -15,7 +15,7 @@
 
         {% for paginate in pagination %}
             {% if paginate.isCurrent %}
-                <li class="active blue darken-2">{{ paginate.number }}</li>
+                <li class="active {{ config.themes.mdux.acccolor }}">{{ paginate.number }}</li>
             {% elseif paginate.isInDelta %}
                 {% set url = (base_url ~ pagination.params ~ paginate.url) | replace({'//': '/'}) %}
                 <li class="waves-effect">

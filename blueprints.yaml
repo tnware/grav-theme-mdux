@@ -43,10 +43,26 @@ form:
         validate:
           type: text
 
+    acccolor:
+        type: text
+        size: medium
+        label: Accent Color
+        default: 'blue accent-1'
+        validate:
+          type: text
+
     footcolor:
         type: text
         size: medium
         label: Footer Color
         default: 'grey darken-2'
+        validate:
+          type: text
+
+    footcolortext:
+        type: text
+        size: medium
+        label: Footer Text Color
+        default: 'white'
         validate:
           type: text
