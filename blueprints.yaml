@@ -1,5 +1,5 @@
 name: MDUX
-version: 0.9.6
+version: 0.9.7
 testing: true
 description: "MDUX is an implementation of Google's 'Material Design' standard. It scales for mobile, as intended."
 icon: empire
@@ -30,6 +30,17 @@ form:
     social.enabled:
         type: toggle
         label: Social Icons in Footer
+        highlight: 1
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+
+    navimg.enabled:
+        type: toggle
+        label: Side Nav BG Image
         highlight: 1
         default: 0
         options:

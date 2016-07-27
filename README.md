@@ -5,7 +5,7 @@
 ![Screenshot](screenshot.jpg)
 
 ### WIP
-v 0.9.6
+v 0.9.7
 
 #### NEW:
 

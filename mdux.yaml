@@ -8,3 +8,5 @@ dropdown:
   enabled: false
 social:
   enabled: false
+navimg:
+  enabled: false
