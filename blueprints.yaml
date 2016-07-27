@@ -49,6 +49,17 @@ form:
         validate:
           type: bool
 
+    sideinfo.enabled:
+        type: toggle
+        label: Site Information in Side Nav
+        highlight: 1
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+
     navcolor:
         type: text
         size: medium

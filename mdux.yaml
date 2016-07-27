@@ -10,3 +10,5 @@ social:
   enabled: false
 navimg:
   enabled: false
+sideinfo:
+  enabled: false
