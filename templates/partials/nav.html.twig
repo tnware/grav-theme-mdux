@@ -18,8 +18,10 @@
 
             <ul class="side-nav" id="slide-out">
                 <li>
-                    <div class="userView {{ config.themes.mdux.barcolor }}">
-                        <img class="background" src="{{ theme_url }}/images/nav_bg2.jpg">
+                    <div class="userView {% if not config.themes.mdux.navimg.enabled %}{{ config.themes.mdux.barcolor }}{% endif %}">
+                      {% if config.themes.mdux.navimg.enabled %}
+                        <img class="background" src="{{ theme_url }}/images/nav_bg.jpg">
+                      {% endif %}
                         {% if config.themes.mdux.sideinfo.enabled %}
                         <a href="#!user"><img class="circle {{ config.themes.mdux.acccolor }}" src="{{ theme_url }}/images/user2.jpg"></a>
                         <a href="#!name">
