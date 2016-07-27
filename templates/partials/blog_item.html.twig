@@ -3,7 +3,7 @@
         <div class="card-image">
           {% set header_img = page.media['header.jpg'] %}
             {% if header_img %}
-                <img class="materialboxed" src="{{ page.media['header.jpg'].url }}">
+                <a href="{{ page.url }}"><img class="materialboxed" src="{{ page.media['header.jpg'].url }}"></a>
             {% else %}
             <div class="section {{ config.themes.mdux.navcolor }}"></div>
             {% endif %}
