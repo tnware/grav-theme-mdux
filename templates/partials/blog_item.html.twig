@@ -4,9 +4,8 @@
             {% if page.media.images|first %}
                 {{ page.media.images|first.cropResize(900,600).html('', '', 'responsive-img') }}
             {% else %}
-                <h1>else</h1>
+            <div class="section {{ config.themes.mdux.navcolor }}"></div>
             {% endif %}
-            <div class="section"></div>
         </div>
         <div class="container">
             <span class="card-title">
