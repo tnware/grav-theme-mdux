@@ -9,6 +9,6 @@ dropdown:
 social:
   enabled: false
 navimg:
-  enabled: false
+  enabled: true
 sideinfo:
-  enabled: false
+  enabled: true
