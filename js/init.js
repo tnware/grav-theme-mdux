@@ -23,6 +23,7 @@
             full_width: true
         });
         $('.carousel').carousel();
+        $('.materialboxed').materialbox();
         $('.slider').slider({
             full_width: true
         });
