@@ -64,7 +64,7 @@ form:
         type: text
         size: medium
         label: Primary Color
-        default: 'blue darken-3'
+        default: 'grey darken-3'
         validate:
           type: text
 
@@ -72,7 +72,7 @@ form:
         type: text
         size: medium
         label: Secondary Color
-        default: 'blue darken-2'
+        default: 'red darken-2'
         validate:
           type: text
 
@@ -80,7 +80,7 @@ form:
         type: text
         size: medium
         label: Accent Color
-        default: 'blue accent-1'
+        default: 'grey accent-1'
         validate:
           type: text
 
@@ -88,7 +88,7 @@ form:
         type: text
         size: medium
         label: Footer Color
-        default: 'grey darken-2'
+        default: 'grey lighten-2'
         validate:
           type: text
 
@@ -96,6 +96,6 @@ form:
         type: text
         size: medium
         label: Footer Text Color
-        default: 'white'
+        default: 'black-text'
         validate:
           type: text
