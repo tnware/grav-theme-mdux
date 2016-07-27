@@ -1,10 +1,10 @@
 <div class="row">
     <div class="card hoverable">
         <div class="card-image">
-            {% if big_header %}
+            {% if page.media.images|first %}
                 {{ page.media.images|first.cropResize(900,600).html('', '', 'responsive-img') }}
             {% else %}
-                {{ page.media.images|first.cropZoom(900,300).html('', '', 'responsive-img') }}
+                <h1>else</h1>
             {% endif %}
             <div class="section"></div>
         </div>
