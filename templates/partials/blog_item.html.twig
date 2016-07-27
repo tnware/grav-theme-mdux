@@ -3,7 +3,7 @@
         <div class="card-image">
           {% set header_img = page.media['header.jpg'] %}
             {% if header_img %}
-                {{ page.media.['header.jpg'].cropResize(900,400).html('', '', 'responsive-img') }}
+                <img class="responsive-img" src="{{ header_img }}?cropResize=900,400">
             {% else %}
             <div class="section {{ config.themes.mdux.navcolor }}"></div>
             {% endif %}
