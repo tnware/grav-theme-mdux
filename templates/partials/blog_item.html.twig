@@ -17,12 +17,14 @@
                                 <i class="mdi mdi-chevron-double-right"></i>
                             </a>
                         {% endif %}
-                        <a class="black-text" href="{{ page.header.link }}">{{ page.title }}</a>
+                        <a class="grey-text" href="{{ page.header.link }}">{{ page.title }}</a>
                     </h4>
+                    <div class="divider"></div>
                 {% else %}
                     <h4>
-                        <a class="black-text" href="{{ page.url }}">{{ page.title }}</a>
+                        <a class="grey-text" href="{{ page.url }}">{{ page.title }}</a>
                     </h4>
+                    <div class="divider"></div>
                 {% endif %}
                 <h5 class="grey-text darken-4-text shadow">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
