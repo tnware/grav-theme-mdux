@@ -6,3 +6,5 @@ footcolor: grey darken-2
 footcolortext: white-text
 dropdown:
   enabled: false
+social:
+  enabled: false

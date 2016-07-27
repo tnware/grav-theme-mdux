@@ -27,6 +27,17 @@ form:
         validate:
           type: bool
 
+    social.enabled:
+        type: toggle
+        label: Social Icons in Footer
+        highlight: 1
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+
     navcolor:
         type: text
         size: medium
