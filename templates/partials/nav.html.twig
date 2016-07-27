@@ -23,12 +23,12 @@
                         <img class="background" src="{{ theme_url }}/images/nav_bg.jpg">
                       {% endif %}
                         {% if config.themes.mdux.sideinfo.enabled %}
-                        <a href="#!user"><img class="circle {{ config.themes.mdux.acccolor }}" src="{{ theme_url }}/images/user2.jpg"></a>
+                        <a href="#!user"><img class="circle {{ config.themes.mdux.acccolor }}" src="{{ theme_url }}/images/user.jpg"></a>
                         <a href="#!name">
                             <span class="white-text name">{{config.site.author.name}}</span>
                         </a>
                         <a href="#!email">
-                            <span class="white-text email"></span>
+                            <span class="white-text email">{{config.site.author.email}}</span>
                         </a>
                         {% else %}
                         <a href="#!user"><img class="circle {{ config.themes.mdux.acccolor }}" src=""></a>
