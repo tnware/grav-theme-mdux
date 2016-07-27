@@ -1,8 +1,9 @@
 <div class="row">
     <div class="card hoverable">
         <div class="card-image">
-            {% if page.media.images|first %}
-                {{ page.media.images|first.cropResize(900,400).html('', '', 'responsive-img') }}
+          {% set header_img = page.media['header.jpg'] %}
+            {% if header_img %}
+                {{ page.media.page.media['header.jpg'].cropResize(900,400).html('', '', 'responsive-img') }}
             {% else %}
             <div class="section {{ config.themes.mdux.navcolor }}"></div>
             {% endif %}
