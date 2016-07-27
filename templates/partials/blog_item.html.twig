@@ -2,7 +2,7 @@
     <div class="card hoverable">
         <div class="card-image">
             {% if page.media.images|first %}
-                {{ page.media.images|first.cropResize(900,600).html('', '', 'responsive-img') }}
+                {{ page.media.images|first.cropResize(900,400).html('', '', 'responsive-img') }}
             {% else %}
             <div class="section {{ config.themes.mdux.navcolor }}"></div>
             {% endif %}
