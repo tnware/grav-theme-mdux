@@ -21,7 +21,6 @@ Version: 0.9.5
     width: auto;
     z-index: 3;
     position: relative;
-    margin-top: 50px;
 }
 .container {
     margin: 0 auto;
