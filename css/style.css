@@ -24,7 +24,7 @@ Version: 0.9.5
     position: relative;
 }
 #wrapper {
-    min-heaight: 100%;
+    min-height: 100%;
 }
 .panel {
     padding: 15px;
