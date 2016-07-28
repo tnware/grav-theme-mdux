@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head %}
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <!--Let browser know website is optimized for mobile-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            {% if header.description %}
+                <meta name="description" content="{{ header.description }}">
+            {% else %}
+                <meta name="description" content="{{ site.description }}">
+            {% endif %}
+            {% if header.robots %}
+                <meta name="robots" content="{{ header.robots }}">
+            {% endif %}
+            <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">
+            <title>
+                {% if header.title %}{{ header.title }}
+                    |
+                {% endif %}{{ site.title }}</title>
+
+            {% block stylesheets %}
+                {# MDUX core CSS #}
+                {% do
+                    assets.add('theme://css/materialize.css', 100) %}
+
+                {# CSS MDUX custom #}
+                {% do
+                    assets.add('theme://css/style.css', 96) %}
+                {% do
+                    assets.addCss('https://fonts.googleapis.com/icon?family=Material+Icons', 98) %}
+                {% do
+                    assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', 97) %}
+
+                {{ assets.css() }}
+            {% endblock %}
+
+            {% block javascripts %}
+                {% do
+                    assets.add('https://code.jquery.com/jquery-2.1.4.min.js', 99) %}
+                {% do
+                    assets.add('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js', 100) %}
+                {% do
+                    assets.add('theme://js/init.js', 101) %}
+
+                {{ assets.js() }}
+            {% endblock %}
+
+        {% endblock head %}
+    </head>
+    <body class="grey lighten-2">
+        {% include 'partials/nav.html.twig' %}
+        <div class="col s12">
+            {% if config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
+        </div>
+        <div id="color-bar" class="{{ config.themes.mdux.barcolor }}"></div>
+        <div id="content">
+            <div class="row">
+                <div class="section">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                {% block content %}
+                                    {{ page.content }}
+                                {% endblock %}
+                                <div class="section"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'partials/footer.html.twig' %}
+
+        <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+            <a class="btn-floating btn-large {{ config.themes.mdux.acccolor }}">
+                <i class="fa fa-share" aria-hidden="true"></i>
+            </a>
+            <ul>
+                <li>
+                    <a class="btn-floating red">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-floating blue lighten-1">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-floating green">
+                        <i class="material-icons">format_quote</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-floating blue darken-3">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </body>
+</html>
