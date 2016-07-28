@@ -69,6 +69,11 @@ Version: 0.9.5
   .container {
     max-width: 1170px;
   }
+  .container-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
+  }
 }
 
 .container-fluid {
