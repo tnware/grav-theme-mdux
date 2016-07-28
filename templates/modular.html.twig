@@ -6,7 +6,7 @@
 {% block content %}
     {{ page.content }}
     {% for module in page.collection() %}
-        <div class="section" id="{{ _self.pageLinkName(module.menu) }}"></div>
+        <div class="link" id="{{ _self.pageLinkName(module.menu) }}"></div>
         {{ module.content }}
     {% endfor %}
 {% endblock %}
