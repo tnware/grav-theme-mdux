@@ -19,6 +19,7 @@ Version: 0.9.5
 }
 #content {
     width: auto;
+    max-width: 1280px;
     z-index: 3;
     position: relative;
 }
