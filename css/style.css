@@ -49,19 +49,19 @@ Version: 0.9.5
 
 @media (min-width: 544px) {
   .container {
-    max-width: 570px;
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    max-width: 740px;
+    width: 100%;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    width: 100%;
   }
 }
 
