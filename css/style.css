@@ -23,7 +23,9 @@ Version: 0.9.5
     z-index: 3;
     position: relative;
 }
-
+#wrapper {
+    min-heaight: 100%;
+}
 .panel {
     padding: 15px;
     margin-bottom: 20px;
