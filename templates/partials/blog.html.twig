@@ -59,12 +59,10 @@
         <div id="color-bar" class="{{ config.themes.mdux.barcolor }}"></div>
         <div id="content" class="container-wrapper">
             <div class="row">
-                <div class="col">
                                 {% block content %}
                                     {{ page.content }}
                                 {% endblock %}
                                 <div class="section"></div>
-                </div>
             </div>
         </div>
         {% include 'partials/footer.html.twig' %}
