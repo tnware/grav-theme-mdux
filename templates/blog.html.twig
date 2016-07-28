@@ -12,14 +12,14 @@
     {% endif %}
 
     {% block content %}
-        <div class="col s12 m8 l8">
+        <div class="col s12 l8">
             {{ page.content }}
             {% for child in collection %}
                 {% include 'partials/blog_item.html.twig' with {'blog': page, 'page': child, 'truncate': true} %}
             {% endfor %}
         </div>
 
-        <div class="col s12 m4 l4">
+        <div class="col s12 l4">
             {% include 'partials/sidebar.html.twig' %}
         </div>
         <div class="row">
@@ -27,7 +27,7 @@
                 {% if config.plugins.pagination.enabled and collection.params.pagination %}
 
                     <div class="row center-align">
-                        <div class="col s12 m8 l8">
+                        <div class="col s12 l8">
                             {% include 'partials/pagination.html.twig' with {'base_url': page.url, 'pagination': collection.params.pagination} %}
                         </div>
                     </div>
