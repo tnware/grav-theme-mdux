@@ -91,3 +91,57 @@ blockquote {
     position: relative;
     margin-top: -250px;
 }
+.mui-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.mui-container:before, .mui-container:after {
+  content: " ";
+  display: table;
+}
+
+.mui-container:after {
+  clear: both;
+}
+
+@media (min-width: 544px) {
+  .mui-container {
+    max-width: 570px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mui-container {
+    max-width: 740px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mui-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mui-container {
+    max-width: 1170px;
+  }
+}
+
+.mui-container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.mui-container-fluid:before, .mui-container-fluid:after {
+  content: " ";
+  display: table;
+}
+
+.mui-container-fluid:after {
+  clear: both;
