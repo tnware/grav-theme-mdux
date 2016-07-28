@@ -78,6 +78,11 @@ Version: 0.9.5
   padding-right: 15px;
 }
 
+.container-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .container-fluid:before, .container-fluid:after {
   content: " ";
   display: table;
