@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-
+<div class="row">
     <div class="col">
         <div id="item" class="block pure-u-2-3">
             {% include 'partials/blog_item.html.twig' with {'blog': page.parent, 'truncate': false} %}
@@ -10,4 +10,5 @@
             {% include 'partials/sidebar.html.twig' with {'blog':page.parent}%}
         </div>
     </div>
+  </div>
 {% endblock %}
