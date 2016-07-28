@@ -1,7 +1,7 @@
 {% set showcase_image = page.media.images | first %}
 
 {% if showcase_image %}
-    <div class="container" style="background-image: url({{ showcase_image.url }});">
+    <div class="container center" style="background-image: url({{ showcase_image.url }});">
         <div class="col">
         {% else %}
             <div class="row">
