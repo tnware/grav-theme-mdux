@@ -1,13 +1,13 @@
 name: MDUX
-version: 0.9.7
+version: 0.9.8
 testing: true
 description: "MDUX is an implementation of Google's 'Material Design' standard. It scales for mobile, as intended."
 icon: empire
 author:
   name: Tyler Woods
-  email: tyler@tnware.net
-  url: http://tnware.net
-homepage: http://mdux.io
+  email: tyler@tylermade.net
+  url: https://tylermade.net
+homepage: https://github.com/tnware/grav-theme-mdux/
 demo: http://mdux.io
 keywords: mdux, theme, html5, css3, material, design, android, google
 bugs: https://github.com/tnware/grav-theme-mdux/issues
@@ -51,9 +51,9 @@ form:
 
     sideinfo.enabled:
         type: toggle
-        label: Site Information in Side Nav
+        label: Nameand E-Mail Address in Side Nav
         highlight: 1
-        default: 1
+        default: 0
         options:
           1: Enabled
           0: Disabled

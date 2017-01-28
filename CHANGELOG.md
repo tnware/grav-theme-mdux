@@ -1,3 +1,14 @@
+# v0.9.8
+## 01/27/2017
+
+1. [](#new)
+    *
+2. [](#improved)
+    * 
+3. [](#bugfix)
+    * blog truncation issue for grav 1.1.14
+
+
 # v0.9.7
 ## 07/27/2016
 

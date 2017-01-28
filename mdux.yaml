@@ -11,4 +11,4 @@ social:
 navimg:
   enabled: true
 sideinfo:
-  enabled: true
+  enabled: false
