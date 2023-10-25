@@ -33,7 +33,7 @@
                 {% do
                     assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', 97) %}
 
-                {{ assets.css() }}
+                {{ assets.css()|raw }}
             {% endblock %}
 
             {% block javascripts %}
@@ -44,7 +44,7 @@
                 {% do
                     assets.add('theme://js/init.js', 101) %}
 
-                {{ assets.js() }}
+                {{ assets.js()|raw }}
             {% endblock %}
 
         {% endblock head %}
@@ -61,7 +61,7 @@
             <div class="container-wrapper">
                 <div class="col s12 panel">
                                 {% block content %}
-                                    {{ page.content }}
+                                    {{ page.content|raw }}
                                 {% endblock %}
                 </div>
             </div>
