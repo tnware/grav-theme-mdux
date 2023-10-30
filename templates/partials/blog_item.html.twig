@@ -35,7 +35,7 @@
             </span>
         </div>
         <div class="card-content">
-                <p class="flow-text">{{ page.content|truncate(550) }}</p>
+                <p class="flow-text">{{ page.content|truncate(550)|raw }}</p>
                 {% set show_prev_next = true %}
         </div>
         <div class="card-action">
