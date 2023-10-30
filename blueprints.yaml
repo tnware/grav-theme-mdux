@@ -64,7 +64,7 @@ form:
         type: text
         size: medium
         label: Primary Color
-        default: 'grey darken-3'
+        default: 'blue darken-3'
         validate:
           type: text
 
@@ -88,7 +88,7 @@ form:
         type: text
         size: medium
         label: Footer Color
-        default: 'grey lighten-2'
+        default: 'blue lighten-2'
         validate:
           type: text
 
