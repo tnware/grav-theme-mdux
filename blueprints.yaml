@@ -1,5 +1,5 @@
 name: MDUX
-version: 0.9.8
+version: 0.9.9
 testing: true
 description: "MDUX is an implementation of Google's 'Material Design' standard. It scales for mobile, as intended."
 icon: empire
