@@ -1,6 +1,5 @@
 name: MDUX
-version: 0.9.9
-testing: true
+version: 1.0.0
 description: "MDUX is an implementation of Google's 'Material Design' standard. It scales for mobile, as intended."
 icon: empire
 author:
@@ -88,7 +87,7 @@ form:
         type: text
         size: medium
         label: Footer Color
-        default: 'blue lighten-2'
+        default: 'blue darken-4'
         validate:
           type: text
 
