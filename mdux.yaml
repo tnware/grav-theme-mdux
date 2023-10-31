@@ -2,7 +2,7 @@ enabled: true
 navcolor: blue darken-3
 barcolor: blue darken-2
 acccolor: blue accent-1
-footcolor: grey darken-2
+footcolor: blue darken-4
 footcolortext: white-text
 dropdown:
   enabled: false
