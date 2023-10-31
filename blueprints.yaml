@@ -3,7 +3,7 @@ version: 1.0.0
 description: "MDUX is an implementation of Google's 'Material Design' standard. It scales for mobile, as intended."
 icon: empire
 author:
-  name: Tyler Woods
+  name: Tyler Woods and diomed
   email: tyler@tylermade.net
   url: https://tylermade.net
 homepage: https://github.com/tnware/grav-theme-mdux/
