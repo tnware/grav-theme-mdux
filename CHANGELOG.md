@@ -1,10 +1,13 @@
-# v0.9.9
-## 100/30/2023
+# v1.0.0
+## 10/31/2023
 
 1. [](#new)
     *
 2. [](#improved)
     * added selection color
+    * font-awesome 4.7.0
+    * jquery 2.4
+    * removed display of tags 
 3. [](#bugfix)
     * added |raw so theme can display
 
