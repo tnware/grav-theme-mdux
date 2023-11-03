@@ -49,7 +49,7 @@ form:
 
     sideinfo.enabled:
         type: toggle
-        label: Nameand E-Mail Address in Side Nav
+        label: Name and E-Mail Address in Side Nav
         highlight: 1
         default: 0
         options:
